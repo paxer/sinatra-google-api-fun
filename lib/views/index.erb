@@ -1,0 +1,14 @@
+<form action="/search" method="post">
+  <label for="keywords">Keywords</label>
+  <input type="text" value="<%=params[:keywords] if params[:keywords] %>" id="keywords" name="keywords">
+  <button type="submit">Search</button>
+  <table>
+    <% @products.each do |product| %>
+        <tr>
+          <td><a href="<%= product.link %>"><img src="<%= product.image %>" alt="<%= product.title %>" width="100"></a></td>
+          <td><%= product.title %></td>
+          <td><%= product.price %></td>
+        </tr>
+    <% end %>
+  </table>
+</form>
