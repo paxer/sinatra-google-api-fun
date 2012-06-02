@@ -1,7 +1,7 @@
 require_relative '../settings'
 require 'rest-client'
 require 'active_support/json'
-require 'CGI'
+require 'cgi'
 
 class Products
   attr_accessor :id, :title, :image, :price, :link
